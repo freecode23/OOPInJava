@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>352</x>
+      <y>128</y>
+      <w>368</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>/Student/
+--
+-mCredits : int
+-mFname: String
+-mId : String
+-mLname : String
+-mTuition : double
+--
++Student(pId:String, pFname: String, pLname: String): &lt;&lt;ctor&gt;&gt;
+/+calcTuition(): void/
++compareTo(pStudent: Student): int &lt;&lt;override&gt;&gt;
++getCredits(): int
++getFirstName(): String
++getId(): string
++getLastName(): String
++getTuitition(): double
++setCredits(pCredits: int): void
++setFname(pFname: String): void
++setId(pId: String): void
++setLname(pLname: String): void
+#setTuition(pTuition: double): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>560</x>
+      <y>408</y>
+      <w>432</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>OnCampusStudent
+--
+_+RESIDENT: int = 1_
+_+NON_RESIDENT: int = 2_
+-mResident: int
+-mProgramFee: double
+--
++OnCampusStudent(pId:String, pFname: String, pLname: String): &lt;&lt;ctor&gt;&gt;
++calcTuition(): void &lt;&lt;override&gt;&gt;
++getProgramFee(): double
++getResidency(): int
++setProgramFee(pProgramFee: double): void
++setResidency(pResident: int): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>208</x>
+      <y>408</y>
+      <w>336</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>OnlineStudent
+--
+-mTechFee: boolean
+--
++OnlineStudent(pId:String, pFname: String, pLname: String): &lt;&lt;ctor&gt;&gt;
++calcTuition(): void &lt;&lt;override&gt;&gt;
++getTechFee(): boolean
++setTechFee(pTechFee: boolean): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>256</x>
+      <y>528</y>
+      <w>264</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>TuitionConstants
+--
+_+ONCAMP_ADD_CREDITS: const int = 475_
+_+ONCAMP_MAX_CREDITS: const int = 18_
+_+ONCAMP_NONRES_BASE: const int = 14875_
+_+ONCAMP_RES_BASE: const int = 7575_
+_+ONLINE_CREDIT_RATE: const int = 950_
+_+ONLINE_TECH_FEE: const int = 75_
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>144</x>
+      <y>0</y>
+      <w>336</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Main
+--
+--
+_+main(pArgs: String[]): void_
+-calcTuition(pStudentList: ArrayList&lt;Student&gt;): void
+-readFile(): ArrayList&lt;Student&gt;
+-readOnCampusStudent(pIn: Scanner): OnCampusStudent
+-readOnlineStudent(pIn: Scanner): OnlineStudent
+-run(): void
+-writeFile(pStudentList: ArrayList&lt;Student&gt;): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>528</x>
+      <y>8</y>
+      <w>424</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Sorter
+--
+_+SORT_ASCENDING: const int = 0_
+_+SORT_DESCENDING: const int = 1_
+--
+_+insertionSort(pList: ArrayList&lt;Student&gt; pList, pOrder: int): void_
+_-keepMoving(pList: ArrayList&lt;Student&gt;, pIndex: int, pOrder: int): boolean_
+_-swap(pList: ArrayList&lt;Student&gt;, pIndex1: int, pIndex2: int)_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>456</x>
+      <y>0</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>uses&gt;</panel_attributes>
+    <additional_attributes>72;40;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>456</x>
+      <y>32</y>
+      <w>64</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>48;96;48;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>736</x>
+      <y>168</y>
+      <w>208</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Comparable&lt;Student&gt;
+--
+--
+compareTo(pStudent: Student): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>696</x>
+      <y>72</y>
+      <w>176</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;80;160;80;160;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>632</x>
+      <y>368</y>
+      <w>40</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>392</x>
+      <y>368</y>
+      <w>40</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>96</x>
+      <y>32</y>
+      <w>128</w>
+      <h>432</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>112;416;24;416;24;24;48;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>16</y>
+      <w>496</w>
+      <h>512</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>480;496;24;496;24;24;64;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>192</x>
+      <y>472</y>
+      <w>80</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+uses&gt;</panel_attributes>
+    <additional_attributes>64;88;40;88;40;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>496</x>
+      <y>544</y>
+      <w>216</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt;uses</panel_attributes>
+    <additional_attributes>24;40;184;40;184;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>696</x>
+      <y>192</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>128;24;128;56;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>96</y>
+      <w>80</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;80;64;80</additional_attributes>
+  </element>
+</diagram>

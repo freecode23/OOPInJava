@@ -1,0 +1,23 @@
+[001] // CLASS: Hw1_31
+[002] // Sherly Hartono, SHARTON1, sharton1@asu.edu
+[003] 
+[004] import java.util.ArrayList;
+[005] 
+[006] public class Hw1_31{
+[007]     // default constructor
+[008]     public Hw1_31(){
+[009]     }
+[010] 
+[011]     ArrayList<Integer> ex3_1(){
+[012]         ArrayList<Integer> list = new ArrayList<>();
+[013] 
+[014]         int count = 2; 
+[015]         while(count != 0){
+[016]             for(int i = 0; i< 5; i++){
+[017]                 list.add(i);
+[018]             }
+[019]             count --;
+[020]         }
+[021]         return list;
+[022]     }
+[023] }
